@@ -1,0 +1,17 @@
+# Environment / secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+module5-env/
+venv/
+.venv/
+
+# Generated output from running the exercises
+*_output.csv
+
+# OS / editor noise
+.DS_Store
+.vscode/
+.idea/

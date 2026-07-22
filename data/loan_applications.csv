@@ -1,0 +1,5 @@
+application_id,applicant_name,credit_score,repayment_history_summary,requested_amount,submitted_documents
+APP001,Maria Santos,742,"18 months of credit history with no missed payments across two credit cards and one auto loan.",25000,"income_proof.pdf, bank_statements_3months.pdf, id_proof.pdf"
+APP002,James Whitfield,615,"Two missed credit card payments in the last 12 months, both resolved within 30 days; one prior auto loan paid off early.",15000,"income_proof.pdf, id_proof.pdf"
+APP003,Priya Nair,780,"5 years of credit history, zero missed payments across three accounts, existing mortgage in good standing.",50000,"income_proof.pdf, bank_statements_3months.pdf, id_proof.pdf, property_deed.pdf"
+APP004,David Chen,590,"One credit card currently 45 days past due; no other credit history on file.",10000,"id_proof.pdf"

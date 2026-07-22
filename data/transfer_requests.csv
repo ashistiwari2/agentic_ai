@@ -1,0 +1,4 @@
+transfer_id,sender_name,recipient_name,amount,currency,memo
+TR001,Acme Logistics Ltd,Global Freight Partners,48500,USD,Q3 shipping contract settlement
+TR002,Acme Logistics Ltd,Unknown Recipient Corp,125000,USD,Urgent - per phone instructions
+TR003,Acme Logistics Ltd,Regional Tax Authority,9200,USD,Quarterly tax remittance

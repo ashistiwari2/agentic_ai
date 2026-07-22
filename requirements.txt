@@ -1,0 +1,6 @@
+# Module 5 — Agentic AI — Hands-On Lab Requirements
+# Install with: pip install -r requirements.txt
+
+pandas>=2.0.0
+openai>=1.30
+python-dotenv>=1.0
