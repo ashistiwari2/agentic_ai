@@ -239,3 +239,30 @@ if __name__ == "__main__":
     print()
     print("FINAL ANSWER:")
     print(final_answer)
+
+###---------OUTPUT---------####
+"""
+TASK: I have a credit score of 720 and want to borrow $30,000 for 24 months on the Flexi Personal Loan. Am I eligible, and what would my EMI be?
+
+[Iteration 1] Agent requests 2 tool call(s):
+  -> search_knowledge_base({'query': 'Flexi Personal Loan annual interest rate tenure product details'})
+     result: {'doc_id': None, 'text': 'No matching knowledge-base entry found.'}
+  -> check_eligibility({'credit_score': 720, 'requested_amount': 30000})
+     result: {'eligible': True, 'credit_score': 720, 'requested_amount':30000, 'reason': 'Meets the score and amount thresholds.'}
+[Iteration 2] Agent requests 1 tool call(s):
+  -> search_knowledge_base({'query': 'Flexi Personal Loan interest rate'})
+     result: {'doc_id': None, 'text': 'No matching knowledge-base entry found.'}
+[Iteration 3] Agent gives final answer (no more tool calls needed).
+
+FINAL ANSWER:
+You’re eligible for the loan based on the bank’s rule check:
+
+- Credit score: 720
+- Requested amount: $30,000
+- Result: Eligible
+
+I couldn’t find a knowledge-base entry for the Flexi Personal Loan interest rate, so I can’t calculate the EMI reliably without the annual rate.
+
+If you share the Flexi Personal Loan annual interest rate, I can calculate the 24-month EMI right away.
+"""
+####---------------DONE------------------###
