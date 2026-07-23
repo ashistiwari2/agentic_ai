@@ -171,3 +171,62 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+######-----------------output-----------------######
+"""
+=== Exercise 2 — supervisor-worker pre-screening ===
+
+APPLICATION APP001: Maria Santos (requesting $25000)
+-- Document Verification Worker (deterministic) --
+Required: ['bank_statements_3months.pdf', 'id_proof.pdf', 'income_proof.pdf']
+Missing: []
+Complete: True
+
+-- Credit Assessment Worker (LLM) --
+Risk Level: Low. The applicant presents low credit risk because a 742 credit score is strong and the 18-month repayment history shows no missed payments across two credit cards and one auto loan.
+
+-- Supervisor synthesises final recommendation --
+Approve — Credit risk is Low based on the strong 742 credit score and clean 18-month repayment history, and document verification is complete with all required documents submitted and no missing items.
+================================================================================
+
+APPLICATION APP002: James Whitfield (requesting $15000)
+-- Document Verification Worker (deterministic) --
+Required: ['id_proof.pdf', 'income_proof.pdf']
+Missing: []
+Complete: True
+
+-- Credit Assessment Worker (LLM) --
+Risk level: Medium. The applicant’s 615 credit score indicates fair credit, and while the repayment history shows some positive behavior with an auto loan paid off early, the two missed credit card payments in the last12 months increase risk despite being resolved within 30 days.
+
+-- Supervisor synthesises final recommendation --
+Approve — Credit risk is Medium based on a 615 score and two recent but quickly resolved missed payments, and all required documents were provided and verified as complete.
+================================================================================
+
+APPLICATION APP003: Priya Nair (requesting $50000)
+-- Document Verification Worker (deterministic) --
+Required: ['bank_statements_3months.pdf', 'id_proof.pdf', 'income_proof.pdf', 'property_deed.pdf']
+Missing: []
+Complete: True
+
+-- Credit Assessment Worker (LLM) --
+Risk Level: Low. The applicant’s 780 credit score indicates strong creditworthiness, and the repayment history shows 5 years of consistent on-time payments with zero missed payments across three accounts, plus a mortgage in good standing.
+
+-- Supervisor synthesises final recommendation --
+Approve — Credit risk is Low based on a 780 score and 5 years of on-timerepayment with no missed payments, and document verification is completewith all required documents submitted.
+================================================================================
+
+APPLICATION APP004: David Chen (requesting $10000)
+-- Document Verification Worker (deterministic) --
+Required: ['id_proof.pdf', 'income_proof.pdf']
+Missing: ['income_proof.pdf']
+Complete: False
+
+-- Credit Assessment Worker (LLM) --
+High risk — A credit score of 590 indicates weak creditworthiness, and the current 45-day past-due credit card payment in a very limited repayment history suggests elevated risk of future delinquency.
+
+-- Supervisor synthesises final recommendation --
+Decline — Credit assessment is High risk due to a 590 score and a current 45-day past-due payment with limited repayment history. Documents are also incomplete, with income_proof.pdf missing.
+================================================================================
+"""
+###--------------DONE------------------###
