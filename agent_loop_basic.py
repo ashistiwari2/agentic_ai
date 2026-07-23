@@ -127,3 +127,27 @@ final_answer = run_agent(system_prompt, user_request, tools, tool_functions)
 print("final answer")
 
 print(final_answer)
+
+###----------OUTPUT------------------###
+"""
+running the agent now
+
+[iteration 1] Agent calls: check_ticket_status({'ticket_id': 'IT-4521'})
+    -> result: Ticket IT-4521:Email service down (status:open, service: email-service)
+[iteration 1] Agent calls: check_service_health({'service_name': 'email-service'})
+    -> result: email-service is currently unhealthy.
+[iteration 2] Agent calls: restart_service({'service_name': 'email-service'})
+    -> result: email-service has been restarted and is now healthy.
+[iteration 3] Agent gave a final answer (no more tools needed).
+final answer
+I checked ticket IT-4521 and confirmed it was related to the email service being down.
+
+What I did:
+- Verified the ticket status: `open`
+- Checked `email-service` health: it was `unhealthy`
+- Restarted `email-service`
+- Confirmed it is now `healthy`
+
+Your email should be working again now. Please try it once more, and if you're still having issues, let me know and I'll investigate further.
+"""
+###----------DONE------------------###
