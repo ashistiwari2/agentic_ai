@@ -1,3 +1,4 @@
 .env
 agentic_venv
 agentic-ai-ey
+__pycache__
